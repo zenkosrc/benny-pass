@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Sing Up"; ObjectID = "MxU-wr-Ncu"; */
+"MxU-wr-Ncu.normalTitle" = "Sing Up";
+
+/* Class = "UITextField"; text = "Password"; ObjectID = "WP4-hB-bD4"; */
+"WP4-hB-bD4.text" = "Password";
+
+/* Class = "UITextField"; text = "Login"; ObjectID = "fry-jB-UIU"; */
+"fry-jB-UIU.text" = "Login";

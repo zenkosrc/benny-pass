@@ -11,6 +11,7 @@
 		8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A5245B287200721831 /* UserDefaultsUtil.swift */; };
 		80190D62D54E7BABB1E3F9CB /* Pods_BennyPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */; };
 		8071F63D2462D147004E0011 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F63C2462D147004E0011 /* ToastExtension.swift */; };
+		8071F6442462D9BB004E0011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8071F6422462D9BB004E0011 /* Localizable.strings */; };
 		80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BC82451C17400C66EB0 /* AppDelegate.swift */; };
 		80C96BCB2451C17400C66EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */; };
 		80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BCC2451C17400C66EB0 /* ViewController.swift */; };
@@ -25,6 +26,10 @@
 		8018C9A12459AD7B00721831 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		8018C9A5245B287200721831 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		8071F63C2462D147004E0011 /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
+		8071F63E2462D895004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		8071F63F2462D896004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8071F6432462D9BB004E0011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = BennyPass/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8071F6462462D9FA004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = BennyPass/uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		80C96BC52451C17400C66EB0 /* BennyPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BennyPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C96BC82451C17400C66EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		80C96BBC2451C17400C66EB0 = {
 			isa = PBXGroup;
 			children = (
+				8071F6422462D9BB004E0011 /* Localizable.strings */,
 				80C96BC72451C17400C66EB0 /* BennyPass */,
 				80C96BC62451C17400C66EB0 /* Products */,
 				B1DB27CEDBE313F8B53C2C92 /* Pods */,
@@ -168,6 +174,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = 80C96BBC2451C17400C66EB0;
 			productRefGroup = 80C96BC62451C17400C66EB0 /* Products */;
@@ -185,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80C96BD52451C17600C66EB0 /* LaunchScreen.storyboard in Resources */,
+				8071F6442462D9BB004E0011 /* Localizable.strings in Resources */,
 				80C96BD22451C17600C66EB0 /* Assets.xcassets in Resources */,
 				80C96BD02451C17400C66EB0 /* Main.storyboard in Resources */,
 			);
@@ -251,10 +259,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8071F6422462D9BB004E0011 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8071F6432462D9BB004E0011 /* Base */,
+				8071F6462462D9FA004E0011 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		80C96BCE2451C17400C66EB0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				80C96BCF2451C17400C66EB0 /* Base */,
+				8071F63E2462D895004E0011 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -263,6 +281,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				80C96BD42451C17600C66EB0 /* Base */,
+				8071F63F2462D896004E0011 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -274,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -334,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
