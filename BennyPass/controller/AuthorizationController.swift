@@ -19,7 +19,16 @@ class AuthorizationController: UIViewController {
     }
 
     @IBAction func confirmButton(_ sender: UIButton) {
-        
+
+    }
+    
+    private func showAlertDialog(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+
+        }))
+//        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
 }
