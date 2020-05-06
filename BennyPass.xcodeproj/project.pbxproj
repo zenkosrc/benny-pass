@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A12459AD7B00721831 /* AuthorizationController.swift */; };
+		8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A5245B287200721831 /* UserDefaultsUtil.swift */; };
 		80190D62D54E7BABB1E3F9CB /* Pods_BennyPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */; };
 		80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BC82451C17400C66EB0 /* AppDelegate.swift */; };
 		80C96BCB2451C17400C66EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 		0011B81A7A54EF6B19D063B2 /* Pods-BennyPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BennyPass.debug.xcconfig"; path = "Target Support Files/Pods-BennyPass/Pods-BennyPass.debug.xcconfig"; sourceTree = "<group>"; };
 		0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BennyPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8018C9A12459AD7B00721831 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
+		8018C9A5245B287200721831 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		80C96BC52451C17400C66EB0 /* BennyPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BennyPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C96BC82451C17400C66EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804BABC02462A38100AC02C8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				8018C9A5245B287200721831 /* UserDefaultsUtil.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		80C96BBC2451C17400C66EB0 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 				80C96BD32451C17600C66EB0 /* LaunchScreen.storyboard */,
 				80C96BD62451C17600C66EB0 /* Info.plist */,
 				8018C9A12459AD7B00721831 /* AuthorizationController.swift */,
+				804BABC02462A38100AC02C8 /* util */,
 			);
 			path = BennyPass;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 			files = (
 				80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */,
 				8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */,
+				8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */,
 				80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */,
 				80C96BCB2451C17400C66EB0 /* SceneDelegate.swift in Sources */,
 			);
