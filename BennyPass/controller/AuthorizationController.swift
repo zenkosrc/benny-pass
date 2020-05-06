@@ -12,45 +12,72 @@ class AuthorizationController: UIViewController {
     
     private let PASSWORD_SIZE: Int = 6
     
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initView()
+    }
+    
+    private func initView(){
+        
+        if !isFirstEntry() {
+            confirmPasswordTextField.isHidden = true
+            statusLabel.text = "Autorisation"
+            
+        }else {
+            statusLabel.text = "Registration"
+        }
     }
 
     private func isFirstEntry() -> Bool{
         return !UserDefaultsUtil.getEntryStatus()
     }
     
-    private func checkFieldsIsEmpty(){
+    private func checkFieldsIsEmpty() -> Bool {
             
-            if loginTextField.text == "" {
-                self.showToast(message: "Введите логин")
-                return
-            }
-            
-            if passwordTextField.text == "" {
-                self.showToast(message: "Введите пароль")
-                return
-            }
-
-            if passwordTextField.text!.count < PASSWORD_SIZE  {
-                self.showToast(message: "Пароль должен быть не менее 6 символов")
-                return
-            }
+        if loginTextField.text == "" {
+            self.showToast(message: "Введите логин")
+            return false
         }
         
-        private func checkUserIdentification(){
-            
-            if loginTextField.text != "" || passwordTextField.text != "" {
-
-            }else {
-                self.showToast(message: "Введите логин и пароль")
-            }
-
+        if passwordTextField.text == "" {
+            self.showToast(message: "Введите пароль")
+            return false
         }
+
+        if passwordTextField.text!.count < PASSWORD_SIZE  {
+            self.showToast(message: "Пароль должен быть не менее 6 символов")
+            return false
+        }
+        
+        if confirmPasswordTextField.text == "" {
+            self.showToast(message: "Подтвердите пароль")
+            return false
+        }
+        
+        if confirmPasswordTextField.text != passwordTextField.text {
+            self.showToast(message: "Пароли не совпадают")
+            return false
+        }
+        
+        return true
+    }
+        
+//        private func checkUserIdentification(){
+//
+//            if loginTextField.text != "" || passwordTextField.text != "" {
+//
+//            }else {
+//                self.showToast(message: "Введите логин и пароль")
+//            }
+//
+//        }
         
         private func showAlertDialog(title: String, message: String){
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -62,6 +89,8 @@ class AuthorizationController: UIViewController {
         }
         
     @IBAction func confirmButton(_ sender: UIButton) {
-        print(isFirstEntry())
+
+        print(checkFieldsIsEmpty())
+        
     }
 }

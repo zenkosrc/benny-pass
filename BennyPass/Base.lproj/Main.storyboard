@@ -47,7 +47,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxU-wr-Ncu">
-                                <rect key="frame" x="62.5" y="544.5" width="250" height="30"/>
+                                <rect key="frame" x="62.5" y="538.5" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4dg-H6-nJQ"/>
                                 </constraints>
@@ -56,26 +56,72 @@
                                     <action selector="confirmButton:" destination="bDD-J4-SgI" eventType="touchUpInside" id="BLF-qc-lV0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-f1-JcG">
+                                <rect key="frame" x="62.5" y="404.5" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="qeb-lr-A00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Us-ay-Wfa">
+                                <rect key="frame" x="62" y="10" width="250" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XVL-D6-6FY"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0kN-gN-au9" kind="embed" id="QpO-sd-6rz"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGH-WH-kUc">
+                                <rect key="frame" x="166.5" y="148" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MxU-wr-Ncu" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="3RV-8e-9s1"/>
                             <constraint firstItem="WP4-hB-bD4" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="6ac-Yz-mcp"/>
+                            <constraint firstItem="MxU-wr-Ncu" firstAttribute="top" secondItem="AgC-f1-JcG" secondAttribute="bottom" constant="100" id="7uA-Xa-tFh"/>
+                            <constraint firstItem="kGH-WH-kUc" firstAttribute="centerY" secondItem="8Us-ay-Wfa" secondAttribute="centerY" id="POD-9L-j0w"/>
+                            <constraint firstItem="kGH-WH-kUc" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="PkI-Nl-SJZ"/>
+                            <constraint firstItem="8Us-ay-Wfa" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="Rpy-O9-Z5g"/>
+                            <constraint firstItem="AgC-f1-JcG" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="bu2-q8-PdM"/>
                             <constraint firstItem="fry-jB-UIU" firstAttribute="centerY" secondItem="aJG-Pe-kLD" secondAttribute="centerY" id="c7W-M7-vnR"/>
+                            <constraint firstItem="8Us-ay-Wfa" firstAttribute="top" secondItem="wfG-Sm-pOI" secondAttribute="top" constant="10" id="fkZ-jv-akQ"/>
+                            <constraint firstItem="fry-jB-UIU" firstAttribute="top" secondItem="8Us-ay-Wfa" secondAttribute="bottom" constant="10" id="gzy-fe-GLM"/>
                             <constraint firstItem="fry-jB-UIU" firstAttribute="centerX" secondItem="aJG-Pe-kLD" secondAttribute="centerX" id="h9X-Lc-qYx"/>
-                            <constraint firstItem="MxU-wr-Ncu" firstAttribute="top" secondItem="WP4-hB-bD4" secondAttribute="bottom" constant="150" id="qa3-oZ-Jel"/>
+                            <constraint firstItem="AgC-f1-JcG" firstAttribute="top" secondItem="WP4-hB-bD4" secondAttribute="bottom" constant="10" id="t20-AP-hbh"/>
                             <constraint firstItem="WP4-hB-bD4" firstAttribute="top" secondItem="fry-jB-UIU" secondAttribute="bottom" constant="10" id="zWk-ns-AdJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wfG-Sm-pOI"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="AgC-f1-JcG" id="LmN-vn-6tb"/>
                         <outlet property="loginTextField" destination="fry-jB-UIU" id="LW8-e6-jqa"/>
                         <outlet property="passwordTextField" destination="WP4-hB-bD4" id="Pk2-7m-9P4"/>
+                        <outlet property="statusLabel" destination="kGH-WH-kUc" id="qgn-GZ-SXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T7-XA-Mhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-241" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lAE-IV-RF8">
+            <objects>
+                <viewController id="0kN-gN-au9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7PJ-nv-4tT">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="297"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnj-HC-pjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="516"/>
         </scene>
     </scenes>
 </document>
