@@ -12,6 +12,7 @@
 		80190D62D54E7BABB1E3F9CB /* Pods_BennyPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */; };
 		8071F63D2462D147004E0011 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F63C2462D147004E0011 /* ToastExtension.swift */; };
 		8071F6442462D9BB004E0011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8071F6422462D9BB004E0011 /* Localizable.strings */; };
+		8071F6482462FBFC004E0011 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F6472462FBFC004E0011 /* UserData.swift */; };
 		80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BC82451C17400C66EB0 /* AppDelegate.swift */; };
 		80C96BCB2451C17400C66EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */; };
 		80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C96BCC2451C17400C66EB0 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		8071F63F2462D896004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8071F6432462D9BB004E0011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = BennyPass/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8071F6462462D9FA004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = BennyPass/uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8071F6472462FBFC004E0011 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		80C96BC52451C17400C66EB0 /* BennyPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BennyPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C96BC82451C17400C66EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		8071F6492462FC19004E0011 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8071F6472462FBFC004E0011 /* UserData.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		80C96BBC2451C17400C66EB0 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				80C96BCE2451C17400C66EB0 /* Main.storyboard */,
 				80DF112B2462A61D0032A3D2 /* controller */,
 				804BABC02462A38100AC02C8 /* util */,
+				8071F6492462FC19004E0011 /* model */,
 				8071F6372462C9E1004E0011 /* extension */,
 				80C96BD62451C17600C66EB0 /* Info.plist */,
 				80C96BC82451C17400C66EB0 /* AppDelegate.swift */,
@@ -249,6 +260,7 @@
 			files = (
 				80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */,
 				8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */,
+				8071F6482462FBFC004E0011 /* UserData.swift in Sources */,
 				8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */,
 				80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */,
 				80C96BCB2451C17400C66EB0 /* SceneDelegate.swift in Sources */,

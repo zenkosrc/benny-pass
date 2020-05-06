@@ -17,7 +17,6 @@ class AuthorizationController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +28,6 @@ class AuthorizationController: UIViewController {
         if !isFirstEntry() {
             confirmPasswordTextField.isHidden = true
             statusLabel.text = "Autorisation"
-            
         }else {
             statusLabel.text = "Registration"
         }
@@ -56,17 +54,26 @@ class AuthorizationController: UIViewController {
             return false
         }
         
-        if confirmPasswordTextField.text == "" {
+        if isFirstEntry() && confirmPasswordTextField.text == "" {
             self.showToast(message: "Подтвердите пароль")
             return false
         }
         
-        if confirmPasswordTextField.text != passwordTextField.text {
+        if isFirstEntry() && confirmPasswordTextField.text != passwordTextField.text {
             self.showToast(message: "Пароли не совпадают")
             return false
         }
         
         return true
+    }
+    
+    private func saveUser(){
+
+
+        let test = UserData(userLogin: "123", userPassword: "321")
+        
+        
+        print(test)
     }
         
 //        private func checkUserIdentification(){
@@ -89,8 +96,13 @@ class AuthorizationController: UIViewController {
         }
         
     @IBAction func confirmButton(_ sender: UIButton) {
-
+        
         print(checkFieldsIsEmpty())
         
+//        if isFirstEntry(){
+//
+//        }else {
+//
+//        }
     }
 }

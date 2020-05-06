@@ -14,6 +14,10 @@ class UserDefaultsUtil: NSObject {
     private static let PASSWORD_USER_DEFAULTS: String   = "password_user_defaults"
     private static let FIRST_ENTRY_MARK: String         = "first_entry_mark_user_defaults"
     
+    static func saveUserData(userData: UserData) {
+        
+    }
+    
     static func getEntryStatus() -> Bool {
         return getBoolFromUserDefaults(key: FIRST_ENTRY_MARK)
     }
