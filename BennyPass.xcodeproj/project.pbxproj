@@ -10,6 +10,7 @@
 		8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A12459AD7B00721831 /* AuthorizationController.swift */; };
 		8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A5245B287200721831 /* UserDefaultsUtil.swift */; };
 		80190D62D54E7BABB1E3F9CB /* Pods_BennyPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */; };
+		807129392472981A00C53837 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807129382472981A00C53837 /* NoteViewController.swift */; };
 		8071F63D2462D147004E0011 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F63C2462D147004E0011 /* ToastExtension.swift */; };
 		8071F6442462D9BB004E0011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8071F6422462D9BB004E0011 /* Localizable.strings */; };
 		8071F6482462FBFC004E0011 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F6472462FBFC004E0011 /* UserData.swift */; };
@@ -26,6 +27,7 @@
 		0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BennyPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8018C9A12459AD7B00721831 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		8018C9A5245B287200721831 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		807129382472981A00C53837 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		8071F63C2462D147004E0011 /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
 		8071F63E2462D895004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		8071F63F2462D896004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				80C96BCC2451C17400C66EB0 /* ViewController.swift */,
 				8018C9A12459AD7B00721831 /* AuthorizationController.swift */,
+				807129382472981A00C53837 /* NoteViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807129392472981A00C53837 /* NoteViewController.swift in Sources */,
 				80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */,
 				8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */,
 				8071F6482462FBFC004E0011 /* UserData.swift in Sources */,

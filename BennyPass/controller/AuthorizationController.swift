@@ -68,41 +68,51 @@ class AuthorizationController: UIViewController {
     }
     
     private func saveUser(){
-
-
-        let test = UserData(userLogin: "123", userPassword: "321")
-        
-        
-        print(test)
+        UserDefaultsUtil.setUserData(userData: UserData(userLogin: loginTextField.text!,
+                                                             userPassword: passwordTextField.text!))
+        UserDefaultsUtil.setEntryStatus(status: true)
     }
+    
+    private func confirmUserData() -> Bool {
         
-//        private func checkUserIdentification(){
-//
-//            if loginTextField.text != "" || passwordTextField.text != "" {
-//
-//            }else {
-//                self.showToast(message: "Введите логин и пароль")
-//            }
-//
-//        }
+        let userDataFromStorage = UserDefaultsUtil.getUserData()
         
-        private func showAlertDialog(title: String, message: String){
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-
-            }))
-    //        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
+        if userDataFromStorage.userLogin == loginTextField.text! && userDataFromStorage.userPassword == passwordTextField.text!{
+            return true
+        }else {
+            return false
         }
+    }
+
+    private func showAlertDialog(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+
+        }))
+        //        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
         
     @IBAction func confirmButton(_ sender: UIButton) {
         
-        print(checkFieldsIsEmpty())
+        print(UserDefaultsUtil.getUserData())
         
-//        if isFirstEntry(){
-//
-//        }else {
-//
-//        }
+        if isFirstEntry() && checkFieldsIsEmpty(){
+            saveUser()
+        }else if !isFirstEntry() && checkFieldsIsEmpty(){
+            
+            if confirmUserData() {
+                print("Открываем активити")
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UITabBarController
+                viewController.modalPresentationStyle = .fullScreen
+                self.present(viewController, animated: true, completion: nil)
+                
+            } else {
+                self.showToast(message: "Не совпадает логин или пароль")
+            }
+        }
     }
 }

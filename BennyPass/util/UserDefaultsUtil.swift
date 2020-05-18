@@ -14,8 +14,18 @@ class UserDefaultsUtil: NSObject {
     private static let PASSWORD_USER_DEFAULTS: String   = "password_user_defaults"
     private static let FIRST_ENTRY_MARK: String         = "first_entry_mark_user_defaults"
     
-    static func saveUserData(userData: UserData) {
-        
+    static func setUserData(userData: UserData) {
+        setToUserDefaults(value: userData.userLogin, key: LOGIN_USER_DEFAULTS)
+        setToUserDefaults(value: userData.userPassword, key: PASSWORD_USER_DEFAULTS)
+    }
+    
+    static func getUserData() -> UserData{
+        return UserData(userLogin: getStringFromUserDefaults(defaultValue: "", key: LOGIN_USER_DEFAULTS),
+                        userPassword: getStringFromUserDefaults(defaultValue: "", key: PASSWORD_USER_DEFAULTS))
+    }
+    
+    static func setEntryStatus(status: Bool) {
+        setToUserDefaults(value: status, key: FIRST_ENTRY_MARK)
     }
     
     static func getEntryStatus() -> Bool {
@@ -30,7 +40,7 @@ class UserDefaultsUtil: NSObject {
         return getStringFromUserDefaults(defaultValue: "", key: PASSWORD_USER_DEFAULTS)
     }
 
-    func setToUserDefaults(value: String, key: String){
+    static func setToUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
     
