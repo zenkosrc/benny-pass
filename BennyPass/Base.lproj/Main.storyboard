@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Passwords-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" customModule="BennyPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" title="Passwords" id="BYZ-38-t0r" customClass="ViewController" customModule="BennyPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,11 +24,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="f7p-1e-lNL"/>
+                    <navigationItem key="navigationItem" title="Passwords" id="MLB-5T-r38">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="F5E-8t-1pB">
+                            <connections>
+                                <action selector="addBarButtonItem:" destination="BYZ-38-t0r" id="noU-be-J42"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="-231"/>
+            <point key="canvasLocation" x="2536.8000000000002" y="-231.63418290854574"/>
         </scene>
         <!--Authorization Controller-->
         <scene sceneID="AlL-cn-MXt">
@@ -124,18 +131,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7SN-1B-b8H"/>
-                        <segue destination="kIb-D9-wdO" kind="relationship" relationship="viewControllers" id="Xvo-zs-wHa"/>
+                        <segue destination="y80-2N-PaD" kind="relationship" relationship="viewControllers" id="7SN-1B-b8H"/>
+                        <segue destination="iYj-gW-kkq" kind="relationship" relationship="viewControllers" id="Xvo-zs-wHa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfA-hM-aPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="617" y="99"/>
         </scene>
-        <!--Item 2-->
+        <!--Notes-->
         <scene sceneID="aD0-ze-rjG">
             <objects>
-                <viewController id="kIb-D9-wdO" customClass="NoteViewController" customModule="BennyPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notes" id="kIb-D9-wdO" customClass="NoteViewController" customModule="BennyPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XwF-vu-Q5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,11 +158,54 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NNM-de-cwb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="sKE-Hz-Vef"/>
+                    <navigationItem key="navigationItem" title="Notes" id="JZj-28-YYR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVf-dB-PUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="620"/>
+            <point key="canvasLocation" x="2536.8000000000002" y="619.34032983508246"/>
+        </scene>
+        <!--NOTES-->
+        <scene sceneID="zWP-Ol-U59">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iYj-gW-kkq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NOTES" image="pencil.tip.crop.circle" catalog="system" id="sKE-Hz-Vef"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pME-pd-yVy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kIb-D9-wdO" kind="relationship" relationship="rootViewController" id="hla-1X-roC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQS-YO-dGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597.5999999999999" y="619.34032983508246"/>
+        </scene>
+        <!--PASSWORDS-->
+        <scene sceneID="uXl-ns-vbE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y80-2N-PaD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="PASSWORDS" image="lock.shield" catalog="system" id="f7p-1e-lNL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LpN-a7-pcg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KmJ-M0-sZX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2if-6K-I0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597.5999999999999" y="-231.63418290854574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock.shield" catalog="system" width="128" height="121"/>
+        <image name="pencil.tip.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

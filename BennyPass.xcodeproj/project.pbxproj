@@ -11,6 +11,8 @@
 		8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018C9A5245B287200721831 /* UserDefaultsUtil.swift */; };
 		80190D62D54E7BABB1E3F9CB /* Pods_BennyPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8A95EB5BF0074D11F7E9E6 /* Pods_BennyPass.framework */; };
 		807129392472981A00C53837 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807129382472981A00C53837 /* NoteViewController.swift */; };
+		8071293D2472C59900C53837 /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071293C2472C59900C53837 /* ProfileDTO.swift */; };
+		807129402472C7C200C53837 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071293F2472C7C200C53837 /* DataBaseManager.swift */; };
 		8071F63D2462D147004E0011 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F63C2462D147004E0011 /* ToastExtension.swift */; };
 		8071F6442462D9BB004E0011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8071F6422462D9BB004E0011 /* Localizable.strings */; };
 		8071F6482462FBFC004E0011 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F6472462FBFC004E0011 /* UserData.swift */; };
@@ -28,6 +30,8 @@
 		8018C9A12459AD7B00721831 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		8018C9A5245B287200721831 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		807129382472981A00C53837 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		8071293C2472C59900C53837 /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
+		8071293F2472C7C200C53837 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		8071F63C2462D147004E0011 /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
 		8071F63E2462D895004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		8071F63F2462D896004E0011 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -63,6 +67,22 @@
 				8018C9A5245B287200721831 /* UserDefaultsUtil.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		807129412472C7D100C53837 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				8071293F2472C7C200C53837 /* DataBaseManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		807129422472C7E800C53837 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				8071293C2472C59900C53837 /* ProfileDTO.swift */,
+			);
+			path = dto;
 			sourceTree = "<group>";
 		};
 		8071F6372462C9E1004E0011 /* extension */ = {
@@ -107,6 +127,8 @@
 				804BABC02462A38100AC02C8 /* util */,
 				8071F6492462FC19004E0011 /* model */,
 				8071F6372462C9E1004E0011 /* extension */,
+				807129412472C7D100C53837 /* manager */,
+				807129422472C7E800C53837 /* dto */,
 				80C96BD62451C17600C66EB0 /* Info.plist */,
 				80C96BC82451C17400C66EB0 /* AppDelegate.swift */,
 				80C96BCA2451C17400C66EB0 /* SceneDelegate.swift */,
@@ -264,6 +286,8 @@
 				807129392472981A00C53837 /* NoteViewController.swift in Sources */,
 				80C96BCD2451C17400C66EB0 /* ViewController.swift in Sources */,
 				8018C9A22459AD7B00721831 /* AuthorizationController.swift in Sources */,
+				8071293D2472C59900C53837 /* ProfileDTO.swift in Sources */,
+				807129402472C7C200C53837 /* DataBaseManager.swift in Sources */,
 				8071F6482462FBFC004E0011 /* UserData.swift in Sources */,
 				8018C9A6245B287200721831 /* UserDefaultsUtil.swift in Sources */,
 				80C96BC92451C17400C66EB0 /* AppDelegate.swift in Sources */,
