@@ -93,23 +93,25 @@ class AuthorizationController: UIViewController {
         //        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
-        
+    
+    private func goToMain(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UITabBarController
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     @IBAction func confirmButton(_ sender: UIButton) {
         
         print(UserDefaultsUtil.getUserData())
         
         if isFirstEntry() && checkFieldsIsEmpty(){
             saveUser()
+            goToMain()
         }else if !isFirstEntry() && checkFieldsIsEmpty(){
-            
             if confirmUserData() {
                 print("Открываем активити")
-                
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UITabBarController
-                viewController.modalPresentationStyle = .fullScreen
-                self.present(viewController, animated: true, completion: nil)
-                
+                goToMain()
             } else {
                 self.showToast(message: "Не совпадает логин или пароль")
             }

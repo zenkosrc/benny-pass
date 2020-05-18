@@ -38,6 +38,16 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+            let name = alert.textFields![0] as UITextField
+            let login = alert.textFields![1] as UITextField
+            let password = alert.textFields![2] as UITextField
+            
+            let userProfile = ProfileDTO()
+            userProfile.name = name.text!
+            userProfile.login = login.text!
+            userProfile.password = password.text!
+            DataBaseManager.getInstance().saveProfileToDB(profile: userProfile)
 
         }))
 //        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))

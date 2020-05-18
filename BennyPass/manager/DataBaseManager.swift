@@ -23,11 +23,10 @@ class DataBaseManager {
         return uniqueInstance!
     }
     
-    
     func saveProfileToDB(profile: ProfileDTO) {
-    
         try! uiRealm.write {
             uiRealm.add(profile)
+            print("\(profile)")
         }
     }
     
@@ -35,4 +34,9 @@ class DataBaseManager {
         return Array(uiRealm.objects(ProfileDTO.self))
     }
     
+    func deleteProfileFromDB(profile: ProfileDTO){
+        try! uiRealm.write {
+            uiRealm.delete(profile)
+        }
+    }
 }
