@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         
         showAlertDialog(title: "Test", message: "Хуест")
         
+//        NSLog("AZE", DataBaseManager.getInstance().getProfileFromDB()?.count ?? 0)
+        
+//        DataBaseManager.getInstance().saveProfileToDB(profile: ProfileDTO())
+        
+//        print(DataBaseManager.getInstance().getProfileFromDB()?.count)
+        
+        
+        
+        print("\(DataBaseManager.getInstance().getProfileFromDB())")
+        
     }
     
     

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DataBaseManager {
     
     private static var uniqueInstance: DataBaseManager?
+    let uiRealm = try! Realm(configuration: .defaultConfiguration)
     
     private init() {}
 
@@ -21,5 +23,16 @@ class DataBaseManager {
         return uniqueInstance!
     }
     
+    
+    func saveProfileToDB(profile: ProfileDTO) {
+    
+        try! uiRealm.write {
+            uiRealm.add(profile)
+        }
+    }
+    
+    func getProfileFromDB() -> [ProfileDTO] {
+        return Array(uiRealm.objects(ProfileDTO.self))
+    }
     
 }

@@ -11,10 +11,10 @@ import RealmSwift
 
 class ProfileDTO: Object {
 
-    dynamic var name = ""
-    dynamic var login = ""
-    dynamic var password = ""
-    dynamic var descr = ""
-    dynamic var icon = ""
-    dynamic var created = NSDate()
+    @objc dynamic var name = "test"
+    @objc dynamic var login = ""
+    @objc dynamic var password = ""
+    @objc dynamic var descr = ""
+    @objc dynamic var icon = ""
+    @objc dynamic var created = NSDate()
 }
